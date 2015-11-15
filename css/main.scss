@@ -1,0 +1,133 @@
+$white1: #fefefe;
+$black1: #353d43;
+$black2: #171c1e;
+$shark1: #abbcc3;
+$shark2: #788489;
+$mark1: #55A7E3;
+$mark2: #4587B8;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    font-family: 'Hack', sans-serif;
+    background-color: $black1;
+    color: $white1;
+    margin:0;
+}
+.button {
+    padding:1em;
+    color: #fefefe;
+    background-color:#74c16c;
+    display:inline-block;
+    border-radius:.3em;
+}
+.button:hover {
+    background-color: #3eb52f;
+}
+.subtext {
+    font-size: 1em;
+}
+#hero {
+    height:90vh;
+    width:100vw;
+    text-align: center;
+    background-size: cover;
+    position:relative;
+}
+section#hero > div  {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+footer {
+    padding:1em;
+    margin:0 auto;
+    text-align: center;
+    color: $shark2;
+}
+footer a, footer a:visited {
+    color: $shark1;
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    }
+footer a:hover {
+    color: $shark2;
+}
+input, select, #submitButton {
+    -webkit-appearance:none;
+    background-color: #fefefe;
+    appearance:none;
+    overflow: hidden;
+    padding:1em;
+    font-size:1em;
+    font-family: 'open sans', sans-serif;
+    border:none;
+    margin:none;
+    border-radius: .3em;
+}
+#submitButton {
+    color: #aaa;
+}
+#submitButton:active {
+    color:#74c16c;
+    box-shadow: 0 0 12px 0 rgba(28,30,33,0.2);
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 12px 0 rgba(28,30,33,0.2);
+}
+.hidden {
+    display:none;
+}
+.steazy {
+    position:fixed;
+    bottom:0;
+    right:-99em;
+    max-height: 333px;
+}
+.steazy2 {
+    position:fixed;
+    bottom:0;
+    left:-99em;
+    max-height: 333px;
+    transform: scaleX(-1);
+}
+
+//project cards
+.card {
+    padding:1em;
+    color: $black1;
+    background-color:$shark1;
+    margin-bottom:1em;
+    width:100vw;
+}
+.content, .logo {
+    display:inline-block;
+}
+.logo {
+    width:30px;
+    height:30px;
+    background-color:red;
+}
+.date, .location {
+    color: $shark2;
+}
+.divider {
+    color:$shark2;
+    padding: 0 1em;
+}
+.city {
+    text-transform: capitalize;
+}
+.state {
+    text-transform: uppercase;
+}
+.month {
+    text-transform: uppercase;
+}
+.day-range {}
