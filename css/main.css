@@ -33,6 +33,9 @@ html, body {
 .subtext {
   font-size: 1em; }
 
+h3 {
+  font-size: .9em; }
+
 #hero {
   min-height: 60vh;
   width: 100vw;
@@ -175,7 +178,7 @@ hr {
 .city {
   text-transform: capitalize; }
 
-.start-date, .end-date {
+.start-date, .end-date, .state {
   text-transform: uppercase; }
 
 .travel-reimbursement::before {
@@ -212,6 +215,19 @@ hr {
 .more-button {
   text-align: center;
   margin: 0 auto; }
+
+.steazy {
+  position: fixed;
+  bottom: 0;
+  right: -99em;
+  max-height: 333px; }
+
+.steazy2 {
+  position: fixed;
+  bottom: 0;
+  left: -99em;
+  max-height: 333px;
+  transform: scaleX(-1); }
 
 @media all and (min-width: 830) {
   .card {

@@ -12,41 +12,75 @@
 <script type="text/javascript" src="js/mustache.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $( '.card' ).click(function() {
-            $("#"+this.id).find('.more-content').slideToggle('normal');
-            $("#"+this.id).find('.topicon').slideToggle('normal');
-            $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
-        });
-        $( '.show-filters' ).click(function() {
-            $('.filters').slideToggle('normal');
-        });
 
+    });
+</script>
+<script type="text/javascript">
+    // Konami code easter egg, displays the 6 god twice
+    $(document).ready(function(){
+        cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+            $(".steazy").toggle(function() {
+                $('.steazy').show(700);
+                $( ".steazy" ).animate({
+                    right: -80 }, {
+                    duration: 1000,
+                    step: function( now, fx ){
+                        $( ".steazy" ).css( "right", now );
+                    }
+                });
+            });
+            $(".steazy2").toggle(function() {
+                $('.steazy2').show(700);
+                $( ".steazy2" ).animate({
+                    left: -80 }, {
+                    duration: 1000,
+                    step: function( now, fx ){
+                        $( ".steazy2" ).css( "left", now );
+                    }
+                });
+            });
+        });
+    });
 
-        var amtCards = ((Object.keys("https://sheetsu.com/apis/a0252596").length)/11 -1);
-        alert("Result is: "+Object.keys("https://sheetsu.com/apis/a0252596"));
-        var sampleData = {
-            cardnumber: "1",
-            image: "http://alexprice.co/projects/makehacks2015/media/1.jpg",
-            name: "MakeHacks",
-            twitter: "@makehacks",
-            website: "makehacks.com",
-            startdate: "Nov 12",
-            enddate: "Nov 13",
-            city: "San Francisco",
-            state: "California",
-            reimbursement: "300",
-            description: "An excellent hackathon, of fantastic proportions and people."
-        };
+    $(document).ready(function(){
+        //load cards
+        var cardData = null;
+        var amtCards = 20;//((Object.keys("https://sheetsu.com/apis/a0252596").length)/11 -1);
 
         $("#templates").load("template.html #cardWrapper",function(){
           var template = document.getElementById('cardWrapper').innerHTML;
-          for(i=amtCards; i>0; i--) {
-              var output = Mustache.render(template, sampleData); //iterate through data using for loop
-               $(output).appendTo("#list");
-           }
+          for(i=0; i<amtCards; i++) {
+              $(".card").click() {
+                  $("#"+this.id).find('.more-content').slideToggle('normal');
+                  $("#"+this.id).find('.topicon').slideToggle('normal');
+                  $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
+              }
+              (function(i) { // protects i in an immediately called function
+                    $.getJSON("https://sheetsu.com/apis/a0252596", function (json) {
+                        cardData = (json.result[i]);
+                        checkForCardData();
+                        $(".card").click() {
+                            $("#"+this.id).find('.more-content').slideToggle('normal');
+                            $("#"+this.id).find('.topicon').slideToggle('normal');
+                            $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
+                        }
+                    });
+                })(i);
 
+              function checkForCardData() {
+                  var output = Mustache.render(template, cardData); //iterate through data using for loop
+                  $(output).appendTo("#list");
+                  $(".card").click() {
+                      $("#"+this.id).find('.more-content').slideToggle('normal');
+                      $("#"+this.id).find('.topicon').slideToggle('normal');
+                      $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
+                  }
+              }
+           }
         });
     });
+
+
 </script>
 </head>
 
@@ -66,7 +100,6 @@
 <div id="list"></div>
 <div id="templates" style="display:none;"></div>
 
-<nav id="home-page"><a href="submit.html">SUBMIT YOUR HACKATHON</a></nav>
 <!--<div class="more-button"><a id="loadmore" href="">load more events</a></div>-->
 
 <footer id="footer">Proudly built at Make Hacks 2015 using
