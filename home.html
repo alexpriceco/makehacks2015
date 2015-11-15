@@ -13,6 +13,13 @@
 <script type="text/javascript" src="js/smooth-scroll.min.js" ></script>
 <script type="text/javascript" src="js/emoji.js" ></script>
 <script type="text/javascript" src="js/cheet.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $( '.card' ).click(function() {
+            $("#"+this.id).find('.more-content').slideToggle('normal');
+        });
+    });
+</script>
 </head>
 
 <body>
@@ -34,9 +41,9 @@
     </div>
 </section>
 
-<div id="list"> <!-- list the events -->
-    <div class="card">
-        <div class="logo"></div>
+<div id="list">
+    <div class="card" id="event1">
+        <div class="logo" style="background-image: url(media/1.jpg)"></div>
         <div class="content">
             <h3>Hacking event</h3>
             <span class="event details">
@@ -44,22 +51,25 @@
                     <span class="month">nov</span>
                     <span class="day-range">13-15</span>
                 </span>
-                <span class="divider">|</span>
+                <span class="divider">/</span>
                 <span class="location">
                     <i class="fa fa-map-marker"></i>
                     <span class="city">austin</span>,
                     <span class="state">tx</span>
                 </span>
             </span>
-        </div>
-        <div class="more hidden">
-            <span class="description"></span>
-            Travel reimbursement: <span class="travel-reimbursement"></span>
-            Sign up at <a class="event-url"></a>!
+        </div><br>
+        <br><hr style="width:100%;">
+        <div class="more-content hidden">
+            <span class="desc">
+                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
+            </span><br><br>
+            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
+            Sign up at <a class="event-url">exampleurl.com</a>!
         </div>
     </div>
-    <div class="card">
-        <div class="logo"></div>
+    <div class="card" id="event2">
+        <div class="logo" style="background-image: url(media/2.jpg)"></div>
         <div class="content">
             <h3>Hacking event</h3>
             <span class="event details">
@@ -67,18 +77,25 @@
                     <span class="month">nov</span>
                     <span class="day-range">13-15</span>
                 </span>
-                <span class="divider">|</span>
+                <span class="divider">/</span>
                 <span class="location">
                     <i class="fa fa-map-marker"></i>
                     <span class="city">austin</span>,
                     <span class="state">tx</span>
                 </span>
             </span>
+        </div><br>
+        <br><hr style="width:100%;">
+        <div class="more-content hidden">
+            <span class="desc">
+                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
+            </span><br><br>
+            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
+            Sign up at <a class="event-url">exampleurl.com</a>!
         </div>
-        <div class="more hidden"></div>
     </div>
-    <div class="card">
-        <div class="logo"></div>
+    <div class="card" id="event3">
+        <div class="logo" style="background-image: url(media/3.jpg)"></div>
         <div class="content">
             <h3>Hacking event</h3>
             <span class="event details">
@@ -86,18 +103,25 @@
                     <span class="month">nov</span>
                     <span class="day-range">13-15</span>
                 </span>
-                <span class="divider">|</span>
+                <span class="divider">/</span>
                 <span class="location">
                     <i class="fa fa-map-marker"></i>
                     <span class="city">austin</span>,
                     <span class="state">tx</span>
                 </span>
             </span>
+        </div><br>
+        <br><hr style="width:100%;">
+        <div class="more-content hidden">
+            <span class="desc">
+                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
+            </span><br><br>
+            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
+            Sign up at <a class="event-url">exampleurl.com</a>!
         </div>
-        <div class="more hidden"></div>
     </div>
-    <div class="card">
-        <div class="logo"></div>
+    <div class="card" id="event4">
+        <div class="logo" style="background-image: url(media/4.jpg)"></div>
         <div class="content">
             <h3>Hacking event</h3>
             <span class="event details">
@@ -105,17 +129,26 @@
                     <span class="month">nov</span>
                     <span class="day-range">13-15</span>
                 </span>
-                <span class="divider">|</span>
+                <span class="divider">/</span>
                 <span class="location">
                     <i class="fa fa-map-marker"></i>
                     <span class="city">austin</span>,
                     <span class="state">tx</span>
                 </span>
             </span>
+        </div><br>
+        <br><hr style="width:100%;">
+        <div class="more-content hidden">
+            <span class="desc">
+                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
+            </span><br><br>
+            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
+            Sign up at <a class="event-url">exampleurl.com</a>!
         </div>
-        <div class="more hidden"></div>
     </div>
 </div>
+
+<div class="more-button"><a id="loadmore" href="">load more events</a></div>
 
 <footer>Proudly built at Make Hacks 2015 using
     <a href="http://sourcefoundry.org/hack/">Hack</a>,

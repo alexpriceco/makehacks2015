@@ -30,7 +30,7 @@ html, body {
     font-size: 1em;
 }
 #hero {
-    height:90vh;
+    min-height:60vh;
     width:100vw;
     text-align: center;
     background-size: cover;
@@ -38,7 +38,7 @@ html, body {
 }
 section#hero > div  {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -48,14 +48,14 @@ footer {
     text-align: center;
     color: $shark2;
 }
-footer a, footer a:visited {
+a, a:visited {
     color: $shark1;
     -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     }
-footer a:hover {
+a:hover {
     color: $shark2;
 }
 input, select, #submitButton {
@@ -100,19 +100,34 @@ input:focus {
 
 //project cards
 .card {
-    padding:1em;
     color: $black1;
-    background-color:$shark1;
-    margin-bottom:1em;
-    width:100vw;
+    background-color:$white1;
+    margin:1em;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(53,61,67,0.3);
+       -moz-box-shadow: 0px 5px 10px 0px rgba(53,61,67,0.3);
+            box-shadow: 0px 5px 10px 0px rgba(53,61,67,0.3);
+    overflow:hidden;
+}
+.more-content {
+    padding:2em;
 }
 .content, .logo {
     display:inline-block;
 }
 .logo {
-    width:30px;
-    height:30px;
-    background-color:red;
+    float:left;
+    height:80px;
+    width:80px;
+}
+.content {
+    float:left;
+    overflow: hidden;
+    padding:1em;
+}
+hr {
+    height:0;
+    border: 0 solid transparent;
+    clear:both;
 }
 .date, .location {
     color: $shark2;
@@ -124,10 +139,15 @@ input:focus {
 .city {
     text-transform: capitalize;
 }
-.state {
+.state, .month {
     text-transform: uppercase;
 }
-.month {
-    text-transform: uppercase;
+.travel-reimbursement::before {
+    content: "up to $"
 }
-.day-range {}
+
+//OTHER STUFF
+.more-button {
+    text-align: center;
+    margin: 0 auto;
+}
