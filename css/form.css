@@ -1,0 +1,14 @@
+div#submit-wrapper {
+  width: 80%;
+  border-radius: 8px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fefefe;
+  color: #353d43; }
+
+.question {
+  display: inline-block;
+  margin: 1em;
+  text-align: left; }
+
+/*# sourceMappingURL=form.css.map */

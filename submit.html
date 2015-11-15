@@ -1,172 +1,65 @@
-<!DOCTYPE html5><html>
-<!-- for the thing: fa-circle-o-notch fa-spin -->
+<!DOCTYPE html><html>
 <head>
-<title>Drizzy Drake Approves</title>
+<title>Drizzy Drake Submit!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/smooth-scroll.js" ></script>
 <script type="text/javascript" src="js/cheet.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $( '.card' ).click(function() {
-            $("#"+this.id).find('.more-content').slideToggle('normal');
-        });
-    });
-</script>
 </head>
 
 <body>
-<nav></nav> <!-- navigation -->
+<nav id="submit-page"><a href="index.html">HOME</a></nav>
 
-<section id="hero"><!-- sell the site -->
-    <div>
-        <h1>Welcome
-            <span class="human" id="type_1">Hackers</span>
-            <span class="human hidden" id="type_2">Designers</span>
-            <span class="human hidden" id="type_3">Developers</span>
-            <span class="human hidden" id="type_4">Rockstars</span>
-            <span class="human hidden" id="type_5">Future CEOs</span>
-        </h1><br>
-        <span class="subtext">
-            In high school? You're in the right place. Enjoy our curated list of
-            hackathons and meetups organized just for you.
-        </span>
-    </div>
-</section>
-
-<div id="list">
-    <div class="card" id="event1">
-        <div class="logo" style="background-image: url(media/1.jpg)"></div>
-        <div class="content">
-            <h3>Hacking event</h3>
-                <span class="sharable">
-                    <i class="fa fa-share-alt"></i>
-                    <i class="fa fa-link"></i>
-                    <i class="fa fa-toggle-down"></i>
-                </span><br>
-            <span class="event details">
-                <span class="date">
-                    <span class="month">nov</span>
-                    <span class="day-range">13-15</span>
-                </span>
-                <span class="divider">/</span>
-                <span class="location">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="city">austin</span>,
-                    <span class="state">tx</span>
-                </span>
-
-            </span>
-        </div><br>
-        <br><hr style="width:100%;">
-        <div class="more-content">
-            <span class="desc">
-                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
-            </span><br><br>
-            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+<div id="submit-wrapper"><div id="submission-form">
+    <form enctype"application/json" action="https://sheetsu.com/apis/29668229" method="post">
+        <div class="question">
+            <input size="22" id="name-of-event" name="name" type="text" placeholder="MakeHacks" autocomplete="off"/><br>
+            <span><label class="title">What's your event called?</label></span>
         </div>
-    </div>
-    <div class="card" id="event2">
-        <div class="logo" style="background-image: url(media/2.jpg)"></div>
-        <div class="content">
-            <h3>Hacking event</h3>
-                <span class="sharable">
-                  <i class="fa fa-share-alt"></i>
-                  <i class="fa fa-link"></i>
-                  <i class="fa fa-toggle-down"></i>
-                </span><br>
-            <span class="event details">
-                <span class="date">
-                    <span class="month">nov</span>
-                    <span class="day-range">13-15</span>
-                </span>
-                <span class="divider">/</span>
-                <span class="location">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="city">austin</span>,
-                    <span class="state">tx</span>
-                </span>
-            </span>
-        </div><br>
-        <br><hr style="width:100%;">
-        <div class="more-content hidden">
-            <span class="desc">
-                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
-            </span><br><br>
-            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+        <div class="question">
+            <input size="22" id="where" name="city" type="text" placeholder="Austin, TX" autocomplete="off"/><br>
+            <span><label class="title">Where will the event be held?</label></span>
         </div>
-    </div>
-    <div class="card" id="event3">
-        <div class="logo" style="background-image: url(media/3.jpg)"></div>
-        <div class="content">
-            <h3>Hacking event</h3>
-                <span class="sharable">
-                  <i class="fa fa-share-alt"></i>
-                  <i class="fa fa-link"></i>
-                  <i class="fa fa-toggle-down"></i>
-                </span><br>
-            <span class="event details">
-                <span class="date">
-                    <span class="month">nov</span>
-                    <span class="day-range">13-15</span>
-                </span>
-                <span class="divider">/</span>
-                <span class="location">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="city">austin</span>,
-                    <span class="state">tx</span>
-                </span>
-            </span>
-        </div><br>
-        <br><hr style="width:100%;">
-        <div class="more-content hidden">
-            <span class="desc">
-                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
-            </span><br><br>
-            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+        <div class="question">
+            <input size="22" id="where" name="start-date" type="text" placeholder="jan 11" autocomplete="off"/><br>
+            <span><label class="title">When will the event start?</label></span>
         </div>
-    </div>
-    <div class="card" id="event4">
-        <div class="logo" style="background-image: url(media/4.jpg)"></div>
-        <div class="content">
-            <h3>Hacking event</h3>
-                <span class="sharable">
-                  <i class="fa fa-share-alt"></i>
-                  <i class="fa fa-link"></i>
-                  <i class="fa fa-toggle-down"></i>
-                </span><br>
-            <span class="event details">
-                <span class="date">
-                    <span class="month">nov</span>
-                    <span class="day-range">13-15</span>
-                </span>
-                <span class="divider">/</span>
-                <span class="location">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="city">austin</span>,
-                    <span class="state">tx</span>
-                </span>
-            </span>
-        </div><br>
-        <br><hr style="width:100%;">
-        <div class="more-content hidden">
-            <span class="desc">
-                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
-            </span><br><br>
-            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+        <div class="question">
+            <input size="22" id="where" name="end-date" type="text" placeholder="jan 12" autocomplete="off"/><br>
+            <span><label class="title">When will the event end?</label></span>
         </div>
-    </div>
-</div>
-
-<div class="more-button"><a id="loadmore" href="">load more events</a></div>
+        <div class="question">
+            <input size="22" id="where" name="venue" type="text" placeholder="Make School" autocomplete="off"/><br>
+            <span><label class="title">Where will the event be held?</label></span>
+        </div>
+        <div class="question">
+            <input size="22" id="where" name="desc" type="text" placeholder="Awesome." autocomplete="off"/><br>
+            <span><label class="title">Describe your event in a sentence or two?</label></span>
+        </div>
+        <div class="question">
+            $ <input size="22" id="where" name="travel-reimb" type="text" placeholder="400" autocomplete="off"/><br>
+            <span><label class="title">How much are you willing to reimburse folks for travel?</label></span>
+        </div>
+        <div class="question">
+            <input size="22" id="where" name="photo-url" type="text" placeholder="exampleurl.com" autocomplete="off"/><br>
+            <span><label class="title">What's the photo url?</label></span>
+        </div>
+        <div class="question">
+            <input size="22" id="where" name="website" type="text" placeholder="makehacks.com" autocomplete="off"/><br>
+            <span><label class="title">What's your website?</label></span>
+        </div>
+        <div class="question">
+            <input size="22" id="where" name="twitter" type="text" placeholder="@makehacks" autocomplete="off"/><br>
+            <span><label class="title">What's your Twitter?</label></span>
+        </div>
+        <button type="submit">Submit my hackathon</button>
+    </form>
+</div></div>
 
 <footer>Proudly built at Make Hacks 2015 using
     <a href="http://sourcefoundry.org/hack/">Hack</a>,

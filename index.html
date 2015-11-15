@@ -8,29 +8,27 @@
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/smooth-scroll.js" ></script>
 <script type="text/javascript" src="js/cheet.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $( '.card' ).click(function() {
             $("#"+this.id).find('.more-content').slideToggle('normal');
+            $("#"+this.id).find('.topicon').slideToggle('normal');
+            $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
+        });
+        $( '.show-filters' ).click(function() {
+            $('.filters').slideToggle('normal');
         });
     });
 </script>
 </head>
 
 <body>
-<nav></nav> <!-- navigation -->
+<nav id="home-page"><a href="submit.html">SUBMIT YOUR HACKATHON</a></nav>
 
-<section id="hero"><!-- sell the site -->
+<section id="hero">
     <div>
-        <h1>Welcome
-            <span class="human" id="type_1">Hackers</span>
-            <span class="human hidden" id="type_2">Designers</span>
-            <span class="human hidden" id="type_3">Developers</span>
-            <span class="human hidden" id="type_4">Rockstars</span>
-            <span class="human hidden" id="type_5">Future CEOs</span>
-        </h1><br>
+        <h1>Welcome Hackers</h1><br>
         <span class="subtext">
             In high school? You're in the right place. Enjoy our curated list of
             hackathons and meetups organized just for you.
@@ -38,15 +36,15 @@
     </div>
 </section>
 
-<div id="list">
+<section id="list">
     <div class="card" id="event1">
         <div class="logo" style="background-image: url(media/1.jpg)"></div>
         <div class="content">
             <h3>Hacking event</h3>
                 <span class="sharable">
-                    <i class="fa fa-share-alt"></i>
-                    <i class="fa fa-link"></i>
-                    <i class="fa fa-toggle-down"></i>
+                    <i class="fa fa-chevron-down"></i>
+                    <a href="http://twitter.com/home?status=Excited about the Example hackathon! @examplehackathon"><i class="fa fa-twitter topicon"></i></a>
+                    <a href="exampleurl.com"><i class="fa fa-link topicon"></i></a>
                 </span><br>
             <span class="event details">
                 <span class="date">
@@ -59,7 +57,6 @@
                     <span class="city">austin</span>,
                     <span class="state">tx</span>
                 </span>
-
             </span>
         </div><br>
         <br><hr style="width:100%;">
@@ -68,7 +65,11 @@
                 This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
             </span><br><br>
             Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+            Sign up at <a href="exampleurl.com" class="event-url">exampleurl.com</a>!
+            <div class="bottom-icons">
+                <a href="http://twitter.com/home?status=Excited about the Example hackathon! @examplehackathon">tweet <i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="exampleurl.com"><i class="fa fa-link"></i> signup</a>
+            </div>
         </div>
     </div>
     <div class="card" id="event2">
@@ -76,9 +77,9 @@
         <div class="content">
             <h3>Hacking event</h3>
                 <span class="sharable">
-                  <i class="fa fa-share-alt"></i>
-                  <i class="fa fa-link"></i>
-                  <i class="fa fa-toggle-down"></i>
+                    <i class="fa fa-chevron-down"></i>
+                    <a href="http://twitter.com/home?status=Excited about the Example hackathon! @examplehackathon"><i class="fa fa-twitter topicon"></i></a>
+                    <a href="exampleurl.com"><i class="fa fa-link topicon"></i></a>
                 </span><br>
             <span class="event details">
                 <span class="date">
@@ -94,12 +95,16 @@
             </span>
         </div><br>
         <br><hr style="width:100%;">
-        <div class="more-content hidden">
+        <div class="more-content">
             <span class="desc">
                 This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
             </span><br><br>
             Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+            Sign up at <a href="exampleurl.com" class="event-url">exampleurl.com</a>!
+            <div class="bottom-icons">
+                <a href="http://twitter.com/home?status=Excited about the Example hackathon! @examplehackathon">tweet <i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="exampleurl.com"><i class="fa fa-link"></i> signup</a>
+            </div>
         </div>
     </div>
     <div class="card" id="event3">
@@ -107,9 +112,9 @@
         <div class="content">
             <h3>Hacking event</h3>
                 <span class="sharable">
-                  <i class="fa fa-share-alt"></i>
-                  <i class="fa fa-link"></i>
-                  <i class="fa fa-toggle-down"></i>
+                    <i class="fa fa-chevron-down"></i>
+                    <a href="http://twitter.com/home?status=Excited about the Example hackathon! @examplehackathon"><i class="fa fa-twitter topicon"></i></a>
+                    <a href="exampleurl.com"><i class="fa fa-link topicon"></i></a>
                 </span><br>
             <span class="event details">
                 <span class="date">
@@ -125,54 +130,27 @@
             </span>
         </div><br>
         <br><hr style="width:100%;">
-        <div class="more-content hidden">
+        <div class="more-content">
             <span class="desc">
                 This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
             </span><br><br>
             Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
+            Sign up at <a href="exampleurl.com" class="event-url">exampleurl.com</a>!
+            <div class="bottom-icons">
+                <a href="http://twitter.com/home?status=Excited about the Example hackathon! @examplehackathon">tweet <i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="exampleurl.com"><i class="fa fa-link"></i> signup</a>
+            </div>
         </div>
     </div>
-    <div class="card" id="event4">
-        <div class="logo" style="background-image: url(media/4.jpg)"></div>
-        <div class="content">
-            <h3>Hacking event</h3>
-                <span class="sharable">
-                  <i class="fa fa-share-alt"></i>
-                  <i class="fa fa-link"></i>
-                  <i class="fa fa-toggle-down"></i>
-                </span><br>
-            <span class="event details">
-                <span class="date">
-                    <span class="month">nov</span>
-                    <span class="day-range">13-15</span>
-                </span>
-                <span class="divider">/</span>
-                <span class="location">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="city">austin</span>,
-                    <span class="state">tx</span>
-                </span>
-            </span>
-        </div><br>
-        <br><hr style="width:100%;">
-        <div class="more-content hidden">
-            <span class="desc">
-                This is an example description of content for this website I'm about that game motherfucker rolling in dough more dough than a pizza shop that's what I'm about.
-            </span><br><br>
-            Travel reimbursement: <span class="travel-reimbursement">300</span><br>
-            Sign up at <a class="event-url">exampleurl.com</a>!
-        </div>
-    </div>
-</div>
+</section>
 
 <div class="more-button"><a id="loadmore" href="">load more events</a></div>
 
-<footer>Proudly built at Make Hacks 2015 using
+<footer id="footer">Proudly built at Make Hacks 2015 using
     <a href="http://sourcefoundry.org/hack/">Hack</a>,
-    <a href="https://jquery.com">jQuery</a>,
+    <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>,
     <a href="https://namuol.github.io/cheet.js/">cheet.js</a>, and
-    <a href="https://github.com/cferdinandi/smooth-scroll">Smooth Scroll</a>.
+    <a href="https://jquery.com">jQuery</a>.
 </footer>
 
 </body>

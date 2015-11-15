@@ -1,0 +1,24 @@
+$white1: #fefefe;
+$white2: #F5F5F5;
+$black1: #353d43;
+$black2: #171c1e;
+$shark1: #abbcc3;
+$shark2: #788489;
+$mark1: #55A7E3;
+$mark2: #4587B8;
+
+div#submit-wrapper {
+    width:80%;
+    border-radius: 8px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $white1;
+    color:$black1;
+}
+#submission-form {
+}
+.question {
+    display: inline-block;
+    margin: 1em;
+    text-align: left;
+}
