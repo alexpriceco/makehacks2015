@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'hackbold';
+  src: url("../fonts/hack-bold-webfont.eot");
+  src: url("../fonts/hack-bold-webfont.woff2") format("woff2"), url("../fonts/hack-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'hackregular';
+  src: url("../fonts/hack-regular-webfont.eot");
+  src: url("../fonts/hack-regular-webfont.woff2") format("woff2"), url("../fonts/hack-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0; }
@@ -89,17 +101,24 @@ input:focus {
   max-height: 333px;
   transform: scaleX(-1); }
 
+#list {
+  margin: 0 auto;
+  text-align: center; }
+
 .card {
   color: #353d43;
   background-color: #fefefe;
   margin: 1em;
+  text-align: left;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(53, 61, 67, 0.3);
   -moz-box-shadow: 0px 5px 10px 0px rgba(53, 61, 67, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(53, 61, 67, 0.3);
   overflow: hidden; }
 
 .more-content {
-  padding: 2em; }
+  padding: 2em;
+  display: none;
+  background-color: #F5F5F5; }
 
 .content, .logo {
   display: inline-block; }
@@ -119,12 +138,15 @@ hr {
   border: 0 solid transparent;
   clear: both; }
 
+.card .content h3 {
+  display: inline; }
+
 .date, .location {
   color: #788489; }
 
 .divider {
   color: #788489;
-  padding: 0 1em; }
+  padding: 0 .5em; }
 
 .city {
   text-transform: capitalize; }
@@ -138,5 +160,17 @@ hr {
 .more-button {
   text-align: center;
   margin: 0 auto; }
+
+/* RESPONSIVE */
+@media all and (min-width: 830) {
+  .card {
+    display: inline-block;
+    width: 380px; }
+
+  .more-content {
+    display: block; }
+
+  .fa-toggle-down {
+    display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */
