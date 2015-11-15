@@ -10,39 +10,9 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/cheet.min.js"></script>
 <script type="text/javascript" src="js/mustache.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
 
-    });
-</script>
 <script type="text/javascript">
-    // Konami code easter egg, displays the 6 god twice
-    $(document).ready(function(){
-        cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
-            $(".steazy").toggle(function() {
-                $('.steazy').show(700);
-                $( ".steazy" ).animate({
-                    right: -80 }, {
-                    duration: 1000,
-                    step: function( now, fx ){
-                        $( ".steazy" ).css( "right", now );
-                    }
-                });
-            });
-            $(".steazy2").toggle(function() {
-                $('.steazy2').show(700);
-                $( ".steazy2" ).animate({
-                    left: -80 }, {
-                    duration: 1000,
-                    step: function( now, fx ){
-                        $( ".steazy2" ).css( "left", now );
-                    }
-                });
-            });
-        });
-    });
-
-    $(document).ready(function(){
+    $(document).ready(function() {
         //load cards
         var cardData = null;
         var amtCards = 20;//((Object.keys("https://sheetsu.com/apis/a0252596").length)/11 -1);
@@ -50,36 +20,56 @@
         $("#templates").load("template.html #cardWrapper",function(){
           var template = document.getElementById('cardWrapper').innerHTML;
           for(i=0; i<amtCards; i++) {
-              $(".card").click() {
-                  $("#"+this.id).find('.more-content').slideToggle('normal');
-                  $("#"+this.id).find('.topicon').slideToggle('normal');
-                  $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
-              }
               (function(i) { // protects i in an immediately called function
-                    $.getJSON("https://sheetsu.com/apis/a0252596", function (json) {
+                    var jqxhr = $.getJSON("https://sheetsu.com/apis/a0252596", function(json)  {
                         cardData = (json.result[i]);
                         checkForCardData();
-                        $(".card").click() {
-                            $("#"+this.id).find('.more-content').slideToggle('normal');
-                            $("#"+this.id).find('.topicon').slideToggle('normal');
-                            $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
-                        }
+                        console.log("success in the foor loop");
                     });
                 })(i);
 
               function checkForCardData() {
                   var output = Mustache.render(template, cardData); //iterate through data using for loop
                   $(output).appendTo("#list");
-                  $(".card").click() {
-                      $("#"+this.id).find('.more-content').slideToggle('normal');
-                      $("#"+this.id).find('.topicon').slideToggle('normal');
-                      $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
-                  }
               }
            }
+           onEverythingDone();
         });
-    });
 
+        function onEverythingDone() {
+            alert("done");
+            //MOBILE OPTIMIZATION
+             $( '.card' ).click(function() {
+                 $("#"+this.id).find('.more-content').slideToggle('normal');
+                 $("#"+this.id).find('.topicon').slideToggle('normal');
+                 $("#"+this.id).find('.fa-chevron-down').toggleClass('fa-rotate-180');
+             });
+
+             //EASTER EGG
+             cheet('↑ ↑ ↓ ↓ ← → ← → b a', function() {
+                 $(".steazy").toggle(function() {
+                     $('.steazy').show(700);
+                     $( ".steazy" ).animate({
+                         right: -80 }, {
+                         duration: 1000,
+                         step: function( now, fx ){
+                             $( ".steazy" ).css( "right", now );
+                         }
+                     });
+                 });
+                 $(".steazy2").toggle(function() {
+                     $('.steazy2').show(700);
+                     $( ".steazy2" ).animate({
+                         left: -80 }, {
+                         duration: 1000,
+                         step: function( now, fx ){
+                             $( ".steazy2" ).css( "left", now );
+                         }
+                     });
+                 });
+             });
+    }
+});
 
 </script>
 </head>
