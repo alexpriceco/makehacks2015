@@ -9,6 +9,31 @@ div#submit-wrapper {
 .question {
   display: inline-block;
   margin: 1em;
-  text-align: left; }
+  text-align: center; }
+
+button[type=submit] {
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  width: 100%;
+  cursor: pointer;
+  background: #abbcc3;
+  color: #fefefe;
+  text-transform: uppercase;
+  border: 1px solid #abbcc3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1); }
+
+button[type=submit]:hover, button[type=submit]:focus {
+  color: #788489;
+  outline: none; }
 
 /*# sourceMappingURL=form.css.map */

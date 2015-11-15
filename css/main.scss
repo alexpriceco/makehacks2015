@@ -170,8 +170,8 @@ input:focus {
 }
 .logo {
     float:left;
-    height:80px;
-    width:80px;
+    height:100px;
+    width:100px;
 }
 .content {
     float:left;
@@ -188,6 +188,7 @@ hr {
 }
 .date, .location {
     color: $shark2;
+    font-size: .8em;
 }
 .divider {
     color:$shark2;
@@ -196,7 +197,7 @@ hr {
 .city {
     text-transform: capitalize;
 }
-.state, .month {
+.start-date, .end-date {
     text-transform: uppercase;
 }
 .travel-reimbursement::before {

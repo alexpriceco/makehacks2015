@@ -1,0 +1,36 @@
+<div id="cardWrapper">
+<div class="card" id="event{{cardnumber}}">
+    <div class="logo" style="background-image: url({{image}})"></div>
+    <div class="content">
+        <h3>Hacking event</h3>
+        <span class="sharable">
+            <i class="fa fa-chevron-down"></i>
+            <a href="http://twitter.com/home?status=Excited about the {{name}}! {{twitter}}"><i class="fa fa-twitter topicon"></i></a>
+            <a href="{{>website}}"><i class="fa fa-link topicon"></i></a>
+        </span><br>
+        <span class="location">
+            <i class="fa fa-map-marker"></i>
+            <span class="city">{{city}}</span>,
+            <span class="state">{{state}}</span>
+        </span><br>
+        <span class="event details">
+            <span class="date">
+                <span class="start-date">{{startdate}}</span> -
+                <span class="end-date">{{enddate}}</span>
+            </span>
+        </span>
+    </div><br>
+    <br><hr style="width:100%;">
+    <div class="more-content">
+        <span class="desc">
+            {{description}}
+        </span><br><br>
+        Travel reimbursement: <span class="travel-reimbursement">{{reimbursement}}</span><br>
+        Sign up at <a href="exampleurl.com" class="event-url">{{website}}</a>!
+        <div class="bottom-icons">
+            <a href="http://twitter.com/home?status=Excited about the {{name}}! {{twitter}}">tweet <i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+            <a href="{{website}}"><i class="fa fa-link"></i> signup</a>
+        </div>
+    </div>
+</div>
+</div>
