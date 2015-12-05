@@ -151,8 +151,8 @@ input:focus {
 
 .logo {
   float: left;
-  height: 100px;
-  width: 100px; }
+  height: 80px;
+  width: 80px; }
 
 .content {
   float: left;
@@ -168,8 +168,7 @@ hr {
   display: inline; }
 
 .date, .location {
-  color: #788489;
-  font-size: .8em; }
+  color: #788489; }
 
 .divider {
   color: #788489;
@@ -178,7 +177,11 @@ hr {
 .city {
   text-transform: capitalize; }
 
+<<<<<<< HEAD
 .start-date, .end-date, .state {
+=======
+.state, .month {
+>>>>>>> parent of 5857920... Quick update
   text-transform: uppercase; }
 
 .travel-reimbursement::before {
